@@ -42,9 +42,9 @@ rm_containers;
 	--network=${DOCKER_NETWORK} \
 	--name ${LDAP_NAME}\
 	--hostname ${LDAP_NAME}\
-	--env LDAP_ORGANISATION=${LDAP_ORGANISATION} \
-	--env LDAP_DOMAIN=${LDAP_DOMAIN} \
-	--env LDAP_ADMIN_PASSWORD=${LDAP_ADMIN_PASSWORD} \
+	--env LDAP_ORGANISATION="${LDAP_ORGANISATION}" \
+	--env LDAP_DOMAIN="${LDAP_DOMAIN}" \
+	--env LDAP_ADMIN_PASSWORD="${LDAP_ADMIN_PASSWORD}" \
 	-v ${DIR}/data/${INSTANCE_NAME}/slapd/database:/var/lib/ldap \
 	-v ${DIR}/data/${INSTANCE_NAME}/slapd/config:/etc/ldap/slapd.d \
 	-v ${DIR}/backup:/backup \
